@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+﻿import React, { useState, useMemo } from 'react';
 import { Monitor, MonitorPlay, MonitorCheck, Moon, DollarSign, UtensilsCrossed, AlertTriangle, Activity } from 'lucide-react';
 import { useAppContext } from '../store/AppContext';
 import StatCard from '../components/ui/StatCard';
@@ -88,7 +88,7 @@ export default function Dashboard() {
         </div>
       </div>
 
-      <Card title="Smart Power Management" className="border-t-4 border-t-emerald-500">
+      <Card title="System Status" className="border-t-4 border-t-emerald-500">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex gap-8">
             <div className="text-center">
@@ -161,3 +161,4 @@ export default function Dashboard() {
     </div>
   );
 }
+

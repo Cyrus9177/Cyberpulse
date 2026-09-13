@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Monitor, Play, Square, Plus, Moon, Activity, Clock, Wifi } from 'lucide-react';
 import { useAppContext } from '../store/AppContext';
@@ -54,7 +54,7 @@ export default function PCManagement() {
 
   const handleWake = (pc: PC) => {
     setWolPC(pc);
-    setWolLogs([{ time: new Date().toISOString(), msg: `Wake-on-LAN command sent to ${pc.name}` }]);
+    setWolLogs([{ time: new Date().toISOString(), msg: `Connecting to ${pc.name}` }]);
     setIsWaking(true);
     
     setTimeout(() => {
@@ -159,7 +159,7 @@ export default function PCManagement() {
         })}
       </div>
 
-      <Modal isOpen={!!wolPC} onClose={closeWolModal} title="Wake-on-LAN Sequence">
+      <Modal isOpen={!!wolPC} onClose={closeWolModal} title="Starting PC">
         <div className="space-y-4">
           <div className="flex items-center justify-center gap-4 py-6 text-gray-400">
             <div className="flex flex-col items-center">
@@ -290,3 +290,4 @@ export default function PCManagement() {
     </div>
   );
 }
+
